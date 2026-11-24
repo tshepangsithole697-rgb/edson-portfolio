@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edson Sithole - Water and Wastewater Process Control learner with Faranang. Matric 2024, 5 months practical experience in water treatment. Aspiring Process Controller based in Rustenburg, North West.">
+    <title>Edson Sithole | Water Treatment Learner & Aspiring Process Controller</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0612;
+            color: #e9e4f5;
+            line-height: 1.7;
+        }
+
+        :root {
+            --purple: #a855f7;
+            --purple-light: #c084fc;
+            --purple-dark: #6d28d9;
+            --dark: #0a0612;
+            --card: #160b26;
+            --muted: #b8a8d9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #0a0612;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #2e1a4d;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--purple);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--purple);
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background:
+                radial-gradient(circle at 80% 20%,
+                #2e1a4d, transparent 45%),
+                radial-gradient(circle at 10% 90%,
+                #1a0b2e, transparent 40%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero small {
+            color: var(--purple);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 75px);
+            line-height: 1.15;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: var(--purple);
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 18px;
+            max-width: 650px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: var(--purple);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+            border: 2px solid var(--purple);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px #a855f755;
+            background: var(--purple-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--purple);
+            margin-left: 12px;
+        }
+
+        .btn-outline:hover {
+            background: var(--purple);
+            color: white;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: var(--purple);
+        }
+
+        .section-intro {
+            color: var(--muted);
+            margin-bottom: 35px;
+        }
+
+        .about-text {
+            max-width: 850px;
+            color: #d8cfee;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #2e1a4d;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--purple);
+        }
+
+        .card h3 {
+            color: var(--purple-light);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .card small {
+            display: block;
+            color: var(--purple);
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .journey {
+            background: #0d0818;
+        }
+
+        .coding-text {
+            max-width: 850px;
+            color: #d8cfee;
+        }
+
+        .contact {
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 100%,
+                #2e1a4d, transparent 55%);
+        }
+
+        .contact p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-details a {
+            color: white;
+            background: #160b26;
+            border: 1px solid #2e1a4d;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-details a:hover {
+            border-color: var(--purple);
+            color: var(--purple);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8a7aa8;
+            border-top: 1px solid #2e1a4d;
+        }
+
+        footer span {
+            color: var(--purple);
+        }
+
+        footer a {
+            color: var(--purple);
+            text-decoration: none;
+        }
+
+        @media(max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">EDSON.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#coding">Coding</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home - NO PHOTO -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <small>Welcome to my digital world</small>
+
+            <h1>
+                I'm <span>Edson Sithole.</span><br>
+                A Water Treatment Learner.<br>
+                A Future Process Controller.
+            </h1>
+
+            <p>
+                Currently completing a learnership with Faranang in Water and
+                Wastewater Process Control Operations. Exploring water treatment,
+                management and the possibilities of coding.
+                This is where my journey meets the world.
+            </p>
+
+            <a href="#about" class="btn">Discover My Journey</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- About - NO PHOTO -->
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <p class="section-intro">
+            A little introduction about the person behind the vision.
+        </p>
+
+        <div class="about-text">
+            <p>
+                My name is Edson Sithole, a 20-year-old aspiring Process Controller
+                from Robega Village, Rustenburg, North West. I am someone
+                who believes that growth comes from curiosity,
+                determination and the courage to explore things
+                beyond what is already known.
+            </p>
+
+            <br>
+
+            <p>
+                I completed my matric in 2024 and I am currently completing a
+                learnership with the company Faranang in Water and Wastewater
+                Treatment Processes. I have 5 months of practical experience
+                in water and wastewater treatment, including water quality
+                testing and monitoring, chemical handling and dosing,
+                stock control and basic troubleshooting.
+            </p>
+
+            <br>
+
+            <p>
+                Beyond my formal training, I have developed an interest
+                in coding and website development. I began teaching
+                myself how to code, driven by a desire to create,
+                build and bring ideas to life through technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
+
+        <p class="section-intro">
+            Knowledge is a journey, not a destination.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <small>2024</small>
+                <h3>Matric - Charora High School</h3>
+                <p>
+                    Successfully completed Grade 12 in 2024,
+                    laying the foundation for my academic
+                    and professional journey.
+                </p>
+            </div>
+
+            <div class="card">
+                <small>Present - Learnership</small>
+                <h3>Water & Wastewater - Faranang</h3>
+                <p>
+                    Currently completing a learnership with Faranang
+                    in Water and Wastewater Process Control Operations.
+                    Learning about water purification, water quality
+                    monitoring and environmental sustainability.
+                </p>
+            </div>
+
+            <div class="card">
+                <small>Aug 2025 - Jan 2026</small>
+                <h3>Sales Agent / Team Leader</h3>
+                <p>
+                    Led a sales team for 6 months with a clean
+                    performance record. Gained skills in customer
+                    service, stock control and daily reporting.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Coding -->
+    <section class="journey" id="coding">
+        <h2 class="section-title">My <span>Coding Journey</span></h2>
+
+        <p class="section-intro">
+            From curiosity to creation.
+        </p>
+
+        <div class="coding-text">
+            <p>
+                My journey into coding began with curiosity and
+                a desire to understand how websites and digital
+                platforms are created. Without formal training
+                in programming, I chose to teach myself, using
+                whatever opportunities and resources I could find.
+            </p>
+
+            <br>
+
+            <p>
+                Although access to learning materials and resources
+                has sometimes been a challenge, my ambition to
+                create websites has never disappeared. I believe
+                that technology is a powerful tool capable of
+                transforming ideas into reality, and I aspire
+                to become someone who contributes to that
+                transformation.
+            </p>
+
+            <br>
+
+            <p>
+                This website is more than an online profile.
+                It represents the beginning of my digital journey,
+                my willingness to learn, and my determination
+                to grow into a developer whose work speaks
+                for itself.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <p class="section-intro">
+            Every great developer starts somewhere.
+            This is where my creations will live.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <small>Faranang Learnership</small>
+                <h3>Water Quality Monitoring</h3>
+                <p>
+                    Practical work in water quality testing and
+                    monitoring, chemical dosing and daily plant
+                    operations during my learnership with Faranang.
+                </p>
+            </div>
+
+            <div class="card">
+                <small>Portfolio</small>
+                <h3>My Personal Website</h3>
+                <p>
+                    My first digital portfolio, created to introduce
+                    myself, showcase my growth and share my journey
+                    with the world.
+                </p>
+            </div>
+
+            <div class="card">
+                <small>Coming Soon</small>
+                <h3>Ideas Into Reality</h3>
+                <p>
+                    My goal is to build useful, creative and
+                    innovative websites that make a difference
+                    in the digital world.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact - EMAIL FIXED -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            My journey is just beginning. I am open to learning,
+            learnerships, Process Controller opportunities, collaboration
+            and new ideas that will help me grow.
+        </p>
+
+        <div class="contact-details">
+            <a href="tel:+27657456948">📞 065 745 6948</a>
+            <a href="mailto:ts3475247@gmail.com">✉️ ts3475247@gmail.com</a>
+            <a href="https://maps.google.com/?q=Rustenburg,North+West" target="_blank">📍 Rustenburg, North West</a>
+        </div>
+
+        <a href="mailto:ts3475247@gmail.com" class="btn">Email Me</a>
+        <br>
+        <a href="#" class="btn btn-outline">Download My CV</a>
+        <p style="margin-top:15px; font-size:14px;">Replace # with your CV link when you upload it, e.g. Edson_Sithole_CV.pdf</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 <span>Edson Sithole</span> | ts3475247@gmail.com
+            <br>Built with curiosity and ambition.
+        </p>
+        <p style="margin-top:10px;"><a href="#home">Back to Top ↑</a></p>
+    </footer>
+
+</body>
+  </html>
